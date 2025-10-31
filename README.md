@@ -2,7 +2,7 @@
 
 ![1761912291555](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/Usuario/Desktop/DuckDB-ETL/image/README/1761912291555.png)
 
-As seen in the graphic, I extracted data from `csv` files, 6 to be specific, then created tables from each file with a few lines:
+In this project, I extracted data from `csv` files, then created tables from each file:
 
 ```python
 tables = ["students", "teachers", "classes", "courses", "enrollments", "grades"]
@@ -17,7 +17,7 @@ for table in tables:
 		read_csv_auto('data/raw_data/{table}.csv');""")
 ```
 
-For the transformations, I modified the schema of each tabl. By default, Postgres takes `INTEGER` columns (4 bytes) as `BIGINT` (8 bytes). For columns like `age`, `id`, `credits`, this is a waste of storage. **For example:**
+For the transformations, I modified the schema of each tabl. By default, Postgres takes `INTEGER` columns (4 bytes) as `BIGINT` (8 bytes). For columns like `age`, `id`, `credits`, this is unnecessary and leads to wasted storage. **For example:**
 
 ```python
 conn.execute("""
