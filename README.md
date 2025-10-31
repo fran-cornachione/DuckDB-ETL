@@ -2,7 +2,7 @@
 
 ![1761912291555](https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/Usuario/Desktop/DuckDB-ETL/image/README/1761912291555.png)
 
-In this project, I extracted data from `csv` files, then created tables from each file:
+In this project, I extracted data from `csv` files, then created tables from each file, and loaded them into Postgres.
 
 ```python
 tables = ["students", "teachers", "classes", "courses", "enrollments", "grades"]
